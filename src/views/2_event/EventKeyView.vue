@@ -1,5 +1,8 @@
 <template>
-  <div></div>
+  <div>
+    <input type="search" name="" id="" v-model="searchText">
+    <button @click="doSearch">조회</button>
+  </div>
 </template>
 
 <script>
@@ -18,7 +21,11 @@ export default {
   },
   unmounted () {
   },
-  methods: {}
+  methods: {
+    doSearch () {
+      console.log(this.searchText)
+    }
+  }
 }
 </script>
 <style scoped>
